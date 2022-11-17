@@ -5,15 +5,6 @@ import App from "./components/App";
 ReactDOM.render(<App />, document.querySelector(".root"));
 /*
 
-
-function Usuario(){
-
-};
-
-function Post(){
-
-};
-
 function Sugestoes(){
 
 };
