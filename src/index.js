@@ -6,19 +6,7 @@ ReactDOM.render(<App />, document.querySelector(".root"));
 /*
 
 
-function SideBar(){
-
-};
-
-function NavBar(){
-
-};
-
 function Usuario(){
-
-};
-
-function Stories(){
 
 };
 
