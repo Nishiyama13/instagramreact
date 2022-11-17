@@ -1,4 +1,12 @@
 export default function Sugestoes() {
+  const caminhoImagens = "/assets/img/";
+  const dataSugestao = [
+    { nome: "bad.vibes.memes", razao: "Segue você", imagem: "bad.vibes.memes.svg" },
+    { nome: "chibirdart", razao: "Segue você", imagem: "chibirdart.svg" },
+    { nome: "razoesparaacreditar", razao: "Novo no Instagram", imagem: "razoesparaacreditar.svg" },
+    { nome: "adorable_animals", razao: "Segue você", imagem: "adorable_animals.svg" },
+    { nome: "smallcutecats", razao: "Segue você", imagem: "smallcutecats.svg" },
+  ]
   return (
     <div class="sugestoes">
       <div class="titulo">
