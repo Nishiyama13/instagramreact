@@ -1,4 +1,18 @@
 export default function Stories() {
+  const caminhoImagens = "/assets/img/";
+  const dataStory = [
+    { usuario: "9gag", imagem: "9gag.svg" },
+    { usuario: "meowed", imagem: "meowed.svg" },
+    { usuario: "barked", imagem: "barked.svg" },
+    { usuario: "nathanwpylestrangeplanet", imagem: "nathanwpylestrangeplanet.svg" },
+    { usuario: "wawawicomics", imagem: "wawawicomics.svg" },
+    { usuario: "respondeai", imagem: "respondeai.svg" },
+    { usuario: "filomoderna", imagem: "filomoderna.svg" },
+    { usuario: "wawawicomics", imagem: "memeriagourmet.svg" }
+  ]
+
+
+
   return (
     <div class="stories">
       <div class="story">
