@@ -4,13 +4,7 @@ import App from "./components/App";
 
 ReactDOM.render(<App />, document.querySelector(".root"));
 /*
-function App(){
 
-};
-
-function Corpo(){
-
-};
 
 function SideBar(){
 
