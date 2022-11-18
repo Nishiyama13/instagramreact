@@ -1,4 +1,5 @@
 import Story from "./Story"
+
 export default function Stories() {
   const dataStory = [
     { usuario: "9gag", imagem: "/assets/img/9gag.svg" },

@@ -5,13 +5,16 @@ export default function Usuario() {
   const tagName = prompt("Digite o seu @");
 
   return (
-    <div class="usuario">
-      <img src={!urlImage ? "/assets/img/catanacomics.svg" : urlImage} />
+    <div class="usuario" data-test="user">
+      <img
+        data-test="profile-image"
+        src={!urlImage ? "/assets/img/catanacomics.svg" : urlImage}
+      />
       <div class="texto">
         <strong>{!userName ? "catanacomics" : userName}</strong>
-        <span>
+        <span data-test="name">
           {!tagName ? "Catana" : tagName}
-          <ion-icon name="pencil"></ion-icon>
+          <ion-icon name="pencil" data-test="edit-name"></ion-icon>
         </span>
       </div>
     </div>
