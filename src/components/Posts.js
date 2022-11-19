@@ -20,17 +20,20 @@ export default function Posts() {
     },
   ];
   return (
-    <div className="posts">
-      {dataPost.map(item => (
-        <Post
-          nomeUsuario={item.nomeUsuario}
-          imagemUsuario={item.imagemUsuario}
-          imagem={item.imagemConteudo}
-          imagemLikeUsuario={item.imagemLikeUsuario}
-          likeUsuarioName={item.likeUsuario}
-          likes={item.likes}
-        />
-      ))}
-    </div>
+    <>
+      <div className="posts">
+        {dataPost.map(item => (
+          <Post
+            key={item.imagemConteudo}
+            nomeUsuario={item.nomeUsuario}
+            imagemUsuario={item.imagemUsuario}
+            imagem={item.imagemConteudo}
+            imagemLikeUsuario={item.imagemLikeUsuario}
+            likeUsuarioName={item.likeUsuario}
+            likes={item.likes}
+          />
+        ))}
+      </div>
+    </>
   );
 }

@@ -27,15 +27,22 @@ export default function Sugestoes() {
     },
   ];
   return (
-    <div className="sugestoes">
-      <div className="titulo">
-        Sugestões para você
-        <div>Ver tudo</div>
+    <>
+      <div className="sugestoes">
+        <div className="titulo">
+          Sugestões para você
+          <div>Ver tudo</div>
+        </div>
+        {dataSugestao.map(item => (
+          <Sugestao
+            key={item.nome}
+            nome={item.nome}
+            razao={item.razao}
+            imagem={item.imagem}
+          />
+        ))}
       </div>
-      {dataSugestao.map(item => (
-        <Sugestao nome={item.nome} razao={item.razao} imagem={item.imagem} />
-      ))}
-    </div>
+    </>
   );
 }
 

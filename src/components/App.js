@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 export default function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <Corpo />
 
@@ -14,6 +14,6 @@ export default function App() {
         <ion-icon name="heart-outline"></ion-icon>
         <ion-icon name="person-outline"></ion-icon>
       </div>
-    </div>
+    </>
   );
 }

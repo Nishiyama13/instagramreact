@@ -16,14 +16,20 @@ export default function Stories() {
   ];
 
   return (
-    <div className="stories">
-      {dataStory.map(item => (
-        <Story usuario={item.usuario} imagem={item.imagem} />
-      ))}
+    <>
+      <div className="stories">
+        {dataStory.map(item => (
+          <Story
+            key={item.imagem}
+            usuario={item.usuario}
+            imagem={item.imagem}
+          />
+        ))}
 
-      <div className="setinha">
-        <ion-icon name="chevron-forward-circle"></ion-icon>
+        <div className="setinha">
+          <ion-icon name="chevron-forward-circle"></ion-icon>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
