@@ -5,12 +5,12 @@ export default function Usuario() {
   const tagName = prompt("Digite o seu @");
 
   return (
-    <div class="usuario" data-test="user">
+    <div className="usuario" data-test="user">
       <img
         data-test="profile-image"
         src={!urlImage ? "/assets/img/catanacomics.svg" : urlImage}
       />
-      <div class="texto">
+      <div className="texto">
         <strong>{!userName ? "catanacomics" : userName}</strong>
         <span data-test="name">
           {!tagName ? "Catana" : tagName}
