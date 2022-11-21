@@ -1,4 +1,7 @@
+import { useState } from "react";
 export default function Post(props) {
+  const [icone, setIcone] = useState("heart-outline");
+
   return (
     <>
       <div className="post" data-test="post">
@@ -19,7 +22,19 @@ export default function Post(props) {
         <div className="fundo">
           <div className="acoes">
             <div>
-              <ion-icon data-test="like-post" name="heart-outline"></ion-icon>
+              <ion-icon
+                className="like"
+                data-test="like-post"
+                name={icone}
+                onClick={() => {
+                  if (icone === "heart-outline") {
+                    setIcone("heart");
+                  } else {
+                    setIcone("heart-outline");
+                  }
+                }}
+              ></ion-icon>
+
               <ion-icon name="chatbubble-outline"></ion-icon>
               <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
@@ -28,6 +43,7 @@ export default function Post(props) {
                 data-test="save-post"
                 name="bookmark-outline"
               ></ion-icon>
+              <ion-icon name="bookmark"></ion-icon>
             </div>
           </div>
 
