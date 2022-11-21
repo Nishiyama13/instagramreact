@@ -16,7 +16,15 @@ export default function Post(props) {
         </div>
 
         <div className="conteudo">
-          <img data-test="post-image" src={props.imagem} />
+          <img
+            data-test="post-image"
+            src={props.imagem}
+            onClick={() => {
+              if (icone === "heart-outline") {
+                setIcone("heart");
+              }
+            }}
+          />
         </div>
 
         <div className="fundo">
