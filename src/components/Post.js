@@ -4,6 +4,7 @@ export default function Post(props) {
   const [icone, setIcone] = useState("heart-outline");
   const [salvar, setSalvar] = useState("bookmark-outline");
   const [contador, setContador] = useState(props.likes);
+  const [cor, setCor] = useState("black");
 
   return (
     <>
@@ -26,6 +27,7 @@ export default function Post(props) {
               if (icone === "heart-outline") {
                 setIcone("heart");
                 setContador(contador + 1);
+                setCor("red");
               }
             }}
           />
@@ -38,13 +40,16 @@ export default function Post(props) {
                 className="like"
                 data-test="like-post"
                 name={icone}
+                style={{ color: cor }}
                 onClick={() => {
                   if (icone === "heart-outline") {
                     setIcone("heart");
                     setContador(contador + 1);
+                    setCor("red");
                   } else {
                     setIcone("heart-outline");
                     setContador(contador - 1);
+                    setCor("black");
                   }
                 }}
               ></ion-icon>
