@@ -1,6 +1,7 @@
 import { useState } from "react";
 export default function Post(props) {
   const [icone, setIcone] = useState("heart-outline");
+  const [salvar, setSalvar] = useState("bookmark-outline");
 
   return (
     <>
@@ -49,9 +50,15 @@ export default function Post(props) {
             <div>
               <ion-icon
                 data-test="save-post"
-                name="bookmark-outline"
+                name={salvar}
+                onClick={() => {
+                  if (salvar === "bookmark-outline") {
+                    setSalvar("bookmark");
+                  } else {
+                    setSalvar("bookmark-outline");
+                  }
+                }}
               ></ion-icon>
-              <ion-icon name="bookmark"></ion-icon>
             </div>
           </div>
 
