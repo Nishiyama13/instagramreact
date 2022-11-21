@@ -75,9 +75,12 @@ export default function Post(props) {
           <div className="curtidas">
             <img src={props.imagemLikeUsuario} />
             <div className="texto">
-              Curtido por{" "}
-              <strong data-test="likes-number">{props.likeUsuarioName}</strong>{" "}
-              e <strong>outras {contador.toLocaleString("pt")} pessoas</strong>
+              Curtido por <strong>{props.likeUsuarioName}</strong> e{" "}
+              <strong>outras</strong>{" "}
+              <strong data-test="likes-number">
+                {contador.toLocaleString("pt")}
+              </strong>{" "}
+              <strong>pessoas</strong>
             </div>
           </div>
         </div>
