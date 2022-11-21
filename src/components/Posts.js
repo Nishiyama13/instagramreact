@@ -8,7 +8,7 @@ export default function Posts() {
       imagemConteudo: "/assets/img/gato-telefone.svg",
       imagemLikeUsuario: "/assets/img/respondeai.svg",
       likeUsuario: "respondeai",
-      likes: 101.523,
+      likes: 101523,
     },
     {
       nomeUsuario: "barked",
@@ -16,7 +16,7 @@ export default function Posts() {
       imagemConteudo: "/assets/img/dog.svg",
       imagemLikeUsuario: "/assets/img/adorable_animals.svg",
       likeUsuario: "adorable_animals",
-      likes: 99.159,
+      likes: 99159,
     },
   ];
   return (

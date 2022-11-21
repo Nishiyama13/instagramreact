@@ -1,7 +1,9 @@
 import { useState } from "react";
+
 export default function Post(props) {
   const [icone, setIcone] = useState("heart-outline");
   const [salvar, setSalvar] = useState("bookmark-outline");
+  const [contador, setContador] = useState(props.likes);
 
   return (
     <>
@@ -23,6 +25,7 @@ export default function Post(props) {
             onClick={() => {
               if (icone === "heart-outline") {
                 setIcone("heart");
+                setContador(contador + 1);
               }
             }}
           />
@@ -38,8 +41,10 @@ export default function Post(props) {
                 onClick={() => {
                   if (icone === "heart-outline") {
                     setIcone("heart");
+                    setContador(contador + 1);
                   } else {
                     setIcone("heart-outline");
+                    setContador(contador - 1);
                   }
                 }}
               ></ion-icon>
@@ -67,7 +72,7 @@ export default function Post(props) {
             <div className="texto">
               Curtido por{" "}
               <strong data-test="likes-number">{props.likeUsuarioName}</strong>{" "}
-              e <strong>outras {props.likes} pessoas</strong>
+              e <strong>outras {contador} pessoas</strong>
             </div>
           </div>
         </div>
