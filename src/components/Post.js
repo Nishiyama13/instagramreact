@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Post(props) {
   const [icone, setIcone] = useState("heart-outline");
   const [salvar, setSalvar] = useState("bookmark-outline");
-  const [contador, setContador] = useState(props.likes);
+  const [contador, setContador] = useState(Number(props.likes));
   const [cor, setCor] = useState("black");
 
   return (
@@ -77,7 +77,7 @@ export default function Post(props) {
             <div className="texto">
               Curtido por{" "}
               <strong data-test="likes-number">{props.likeUsuarioName}</strong>{" "}
-              e <strong>outras {contador} pessoas</strong>
+              e <strong>outras {contador.toLocaleString("pt")} pessoas</strong>
             </div>
           </div>
         </div>
