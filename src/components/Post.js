@@ -6,6 +6,16 @@ export default function Post(props) {
   const [contador, setContador] = useState(Number(props.likes));
   const [cor, setCor] = useState("black");
 
+  function clickDuplo(event) {
+    if (event.detail === 2) {
+      if (icone === "heart-outline") {
+        setIcone("heart");
+        setContador(contador + 1);
+        setCor("red");
+      }
+    }
+  }
+
   return (
     <>
       <div className="post" data-test="post">
@@ -20,17 +30,7 @@ export default function Post(props) {
         </div>
 
         <div className="conteudo">
-          <img
-            data-test="post-image"
-            src={props.imagem}
-            onClick={() => {
-              if (icone === "heart-outline") {
-                setIcone("heart");
-                setContador(contador + 1);
-                setCor("red");
-              }
-            }}
-          />
+          <img data-test="post-image" src={props.imagem} onClick={clickDuplo} />
         </div>
 
         <div className="fundo">
