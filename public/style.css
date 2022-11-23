@@ -319,6 +319,9 @@ body {
 .instagram-mobile {
   display: none !important;
 }
+.conteudo {
+  position: relative;
+}
 
 @media (max-width: 935px) {
   .sidebar {
@@ -409,12 +412,4 @@ ion-icon {
 
 .usuario ion-icon {
   margin-left: 5px;
-}
-
-.preto {
-  color: #000000;
-}
-
-.vermelho {
-  color: red;
 }

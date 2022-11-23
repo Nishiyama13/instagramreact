@@ -5,14 +5,19 @@ export default function Post(props) {
   const [salvar, setSalvar] = useState("bookmark-outline");
   const [contador, setContador] = useState(Number(props.likes));
   const [cor, setCor] = useState("black");
+  const [animacao, setAnimacao] = useState(false);
 
   function clickDuplo(event) {
     if (event.detail === 2) {
+      setAnimacao(true);
       if (icone === "heart-outline") {
         setIcone("heart");
         setContador(contador + 1);
         setCor("red");
       }
+      setTimeout(() => {
+        setAnimacao(false);
+      }, 500);
     }
   }
 
@@ -31,6 +36,10 @@ export default function Post(props) {
 
         <div className="conteudo">
           <img data-test="post-image" src={props.imagem} onClick={clickDuplo} />
+          <ion-icon
+            class={`coracao ${animacao ? "scale-up-center" : "invisivel"}`}
+            name="heart"
+          ></ion-icon>
         </div>
 
         <div className="fundo">
